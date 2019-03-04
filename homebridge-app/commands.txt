@@ -1,0 +1,11 @@
+Node v4.3.2 or greater is required
+sudo apt-get install libavahi-compat-libdnssd-dev
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo npm install -g --unsafe-perm homebridge
+npm install -g homebridge-camera-rpi
+sudo modprobe bcm2835-v4l2
+mkdir /root/.homebridge
+touch /root/.homebridge/config.json
+sudo homebridge

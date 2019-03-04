@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: homebridge-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: homebridge
+  template:
+    metadata:
+      labels:
+        component: homebridge
+    spec:
+      containers:
+        - name: homebridge
+          image: stylianosrigas/homebridge-app:latest
+          ports:
+            - containerPort: 3000
